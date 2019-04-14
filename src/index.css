@@ -12,3 +12,33 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.container-panel {
+  position: relative;
+  background-color: #fff;
+  padding-top: 40px;
+  margin-top: 20px;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  padding: 20px 30px;
+  font-family: 'Open sans', Arial, sans-serif;
+  border-radius: 25px;
+}
+
+.container-panel {
+  max-width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-panel p {
+  margin: 0px;
+}
+
+.footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: gray;
+}
+
