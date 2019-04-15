@@ -8,7 +8,7 @@ function Footer() {
     <footer>
       <Form>
         <FormGroup>
-          <Label for="footer">Popovich Alex. Web developer(React-Redux)</Label>
+          <Label for="footer">Popovych Alex. Web developer(React-Redux)</Label>
 
         </FormGroup>
       </Form>

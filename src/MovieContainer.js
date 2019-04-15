@@ -10,6 +10,7 @@ function Movie(props) {
   } = props;
   const { params } = match;
   let imageWidth;
+  // eslint-disable-next-line no-undef
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
     imageWidth = 'w154';
   } else {
@@ -19,7 +20,9 @@ function Movie(props) {
   const imageURL = `https://image.tmdb.org/t/p/${imageWidth}${movie.poster_path}`;
   //   const backgroundImageUrl = `https://image.tmdb.org/t/p/original${movie.poster_path}`;
   document.querySelector('body').style.backgroundImage = `url(https://image.tmdb.org/t/p/original${movie.backdrop_path})`;
-
+  document.querySelector('footer').style.position = 'absolute';
+  document.querySelector('footer').style.bottom = '0px';
+  
   useEffect(() => { getMovie(params.id); }, []);
   return (
     +params.id === movie.id && (

@@ -1,4 +1,4 @@
-import { GET_FILMS, GET_FILM_BY_ID, SHOW_ERROR } from '../../actions/films/messages';
+import { GET_FILMS } from '../../actions/films/messages';
 
 const filmsReducer = (state = {}, action) => {
   switch (action.type) {

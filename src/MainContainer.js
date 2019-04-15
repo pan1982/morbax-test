@@ -11,13 +11,13 @@ function MainContainer(props) {
   const hasResultsProperty = Object.prototype.hasOwnProperty.call(movies, 'results');
 
   useEffect(() => {
-    getMovies(helper.sortBy);
+    getMovies(helper.genres, helper.sortBy, helper.page);
   }, []);
 
   return (
     <div>
 
-      {hasResultsProperty && <Main movies={movies} />}
+      {hasResultsProperty && <Main movies={movies} getMovies={getMovies} />}
     </div>
   );
 }
@@ -34,7 +34,7 @@ const mapState = (state) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  getMovies: () => { dispatch(Commands.getFilms()); },
+  getMovies: (genres, sortBy, page) => { dispatch(Commands.getFilms(genres, sortBy, page)); },
 });
 
 export default connect(mapState, mapDispatchToProps)(MainContainer);
