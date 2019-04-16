@@ -22,6 +22,7 @@ function App(props) {
 
   const setGenre = (value) => {
     updateGenre(value);
+    getMovies(value, helper.sortBy);
   };
 
   return (
@@ -33,8 +34,8 @@ function App(props) {
 
             <FormGroup>
               <Label for="sort">Genre:</Label>
-              <Input type="select" name="select" id="exampleSelect" value={helper.genre} onChange={e => setGenre(e.target.value)}>
-                {genres.map(genre => <option key={genre.id}>{genre.name}</option>)}
+              <Input type="select" name="select" id="exampleSelect" onChange={e => setGenre(e.target.selectedOptions[0].id)}>
+                {genres.map(genre => <option id={genre.id} key={genre.id}>{genre.name}</option>)}
               </Input>
             </FormGroup>
             <FormGroup>
